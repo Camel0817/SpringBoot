@@ -35,7 +35,7 @@ public class ProductController {
 	 * 상품 조회
 	 */
 	@RequestMapping(value = "/products/{id}", method = RequestMethod.GET)
-	public String getProduct(@PathVariable("id") int id) {
+	public Product getProduct(@PathVariable("id") int id) {
 		// ProductService productService = new ProductService();
 		System.out.println(id);
 		return productService.getProduct(id);

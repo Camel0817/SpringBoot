@@ -36,7 +36,7 @@ public class ProductService {
 		this.productRepository = productRepository;
 	}
 	
-	public String getProduct(int id) {
+	public Product getProduct(int id) {
 		return productRepository.getProduct(id);
 	}
 	
