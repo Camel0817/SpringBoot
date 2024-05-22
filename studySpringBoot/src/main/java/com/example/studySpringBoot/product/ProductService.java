@@ -40,7 +40,8 @@ public class ProductService {
 		return productRepository.getProduct(id);
 	}
 	
-	public void saveProduct(String productName) {
-		productRepository.save(productName);
+	public void saveProduct(Product product) {
+//		productRepository.save(productName);
+		productRepository.save(product);
 	}
 }

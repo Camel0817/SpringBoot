@@ -3,6 +3,7 @@ package com.example.studySpringBoot.product;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -46,6 +47,7 @@ public class ProductController {
 	 * 2. @RequestParam
 	 * 		http://localhost:8080/products?name=_____
 	 * 3. @RequestBody
+	 * 		http://localhost:8080/products
 	 * 4. @ModelAtrribute
 	 * 5. @PathVariable
 	 * 		http://localhost:8080/products/{id}
@@ -55,9 +57,10 @@ public class ProductController {
 	 * 상품 등록
 	 */
 	@RequestMapping(value = "/products", method = RequestMethod.POST)
-	public void saveProduct(@RequestParam(value = "name") String productName) {
+	public void saveProduct(@RequestBody Product product) {
+//	public void saveProduct(@RequestParam(value = "name") String productName) {
 		// localhost:8080/products?name=______ => productName
 		System.out.println("POST!");
-		productService.saveProduct(productName);
+		productService.saveProduct(product);
 	}
 }

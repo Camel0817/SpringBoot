@@ -15,7 +15,8 @@ public class ProductRepository {
 		return dataBase.get(idx);
 	}
 	
-	public void save(String productName) {
-		dataBase.put(id++, productName);
+	public void save(Product product) {
+		System.out.println(product.getName());
+//		dataBase.put(id++, productName);
 	}
 }
