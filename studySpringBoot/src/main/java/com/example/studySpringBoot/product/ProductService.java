@@ -1,5 +1,11 @@
 package com.example.studySpringBoot.product;
 
-public class ProductService {
+import org.springframework.stereotype.Service;
 
+@Service
+public class ProductService {
+	
+	public String getProduct() {
+		return "NoteBook!";
+	}
 }

@@ -27,6 +27,7 @@ public class ProductController {
 	 */
 	@RequestMapping(value = "", method = RequestMethod.GET)
 	public String getProduct() {
-		return "NoteBook";
+		ProductService productService = new ProductService();
+		return productService.getProduct();
 	}
 }
