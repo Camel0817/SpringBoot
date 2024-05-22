@@ -14,6 +14,13 @@ public class ProductController {
 	 * 그 안에서, 그에 맞는 로직을 수행할 수 있도록 서비스한테 시킬거에요.
 	 */
 	
+	/*
+	 * HTTP method 
+	 * 1. 조회 : GET 
+	 * 2. 등록(생성) : POST 
+	 * 3. 수정 : 전체 - PUT 부분 - PATCH 
+	 * 4. 삭제 : DELETE
+	 */
 	
 	/* 
 	 * 상품조회
