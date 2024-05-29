@@ -37,6 +37,20 @@ public class ProductController {
 	 */
 	
 	/* 
+	 * 전체 상품 조회
+	 */
+	@GetMapping("/products")
+	public List<Product> getProducts() {
+		return productService.getProducts(); // JSON Array
+	}
+	
+//	method명 CleanCode
+//		1. 명사 vs 동사 : 동작,기능,행위 => 동사
+//		2. getProductList
+//			1) List: 반환 타입으로 표현가능
+//			2) 의미만 제대로 담고 있으면 된다! (굳이 구조를 끼울 필요는...)
+	
+	/* 
 	 * 개별 상품 조회
 	 */
 //	@RequestMapping(value = "/products/{id}", method = RequestMethod.GET)

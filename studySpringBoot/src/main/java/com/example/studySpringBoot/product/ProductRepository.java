@@ -1,6 +1,8 @@
 package com.example.studySpringBoot.product;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import org.springframework.stereotype.Repository;
@@ -18,5 +20,9 @@ public class ProductRepository {
 	public void save(Product product) {
 		System.out.println(product.getName());
 		dataBase.put(id++, product);
+	}
+
+	public List<Product> getProducts() {
+		return new ArrayList<>(dataBase.values());
 	}
 }
