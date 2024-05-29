@@ -86,4 +86,5 @@ public class ProductController {
 		System.out.println("POST!");
 		productService.saveProduct(product);
 	}
+
 }
