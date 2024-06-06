@@ -7,6 +7,11 @@ import java.util.Map;
 
 import org.springframework.stereotype.Repository;
 
+// 해아할 일
+// DB에 Product를 저장할 공간, 테이블... 준비
+// 1) DB랑 연결
+// 2) Product 저장, 조회...
+
 @Repository
 //	- @Component가 들어있는 건 당연
 //	- DB랑 연결할 때 기본적으로 필요할 것 같은 예외 처리 제공
