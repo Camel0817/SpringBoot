@@ -38,9 +38,9 @@ public class ProductService {
 		this.productRepository = productRepository;
 	}
 	
-	public void makeConnection() {
-		productRepository.makeConnection();
-	}
+//	public void makeConnection() {
+//		productRepository.makeConnection();
+//	}
 	
 	public Product getProduct(int id) {
 		return productRepository.getProduct(id);

@@ -23,13 +23,13 @@ public class ProductRepository {
 	
 	private Map<Integer, Product> dataBase = new HashMap<>();
 	private int id = 1;
-	@Autowired
-	DataSource dataSource;
-	
-	// dataSource로 터널 뚫어보기 (=DB와 커넥션 만들기)
-	public void makeConnection() {
-		DataSourceUtils.getConnection(dataSource);
-	}
+//	@Autowired
+//	DataSource dataSource;
+//	
+//	// dataSource로 터널 뚫어보기 (=DB와 커넥션 만들기)
+//	public void makeConnection() {
+//		DataSourceUtils.getConnection(dataSource);
+//	}
 	
 	
 	public Product getProduct(int idx) {
