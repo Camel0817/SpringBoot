@@ -19,7 +19,7 @@ import com.example.studySpringBoot.product.ProductRepository;
 //	Java 버전 : 
 
 @Configuration // 여기에도 @Component가 있음
-public class AppConfig {
+public class AppConfig { 
 	@Bean // 스프링아, 아래 메소드가 반환하는 객체를 스프링 빈으로 등록해줘
 	public ProductRepository productRepository() {
 		return new ProductRepository();

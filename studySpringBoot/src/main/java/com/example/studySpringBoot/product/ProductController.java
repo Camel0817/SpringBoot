@@ -35,6 +35,11 @@ public class ProductController {
 	 * 			부분 - PATCH 
 	 * 4. 삭제 : DELETE
 	 */
+	@GetMapping("/connectDB")
+	public void makeConnection() {
+		productService.makeConnection();
+	}
+	
 	
 	/* 
 	 * 전체 상품 조회
