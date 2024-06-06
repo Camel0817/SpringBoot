@@ -26,6 +26,18 @@ dependencies {
 	
 	//JPA 연결
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	
+	//	* 중요
+	// 	Application Programming Interface
+	// 	자바의 인터페이스
+	// 	JDBC API : DB랑 얘기할 때 앞장서서,
+	//				+ 근데 인터페이스임
+	//				ex. DataSource 객체로 썼는데, interface네
+	//					사실 진짜 구현체는 따로 있음, 업캐스팅해서 썻을 뿐
+	// JPA(PI) : ORM 앞장서서,
+	//			  + 근데.. 얘도 인터페이스,
+	//				ex. ______객체가 열일 할 것 같은데.. interface일 것 같고..
+	//					진짜 구현체는 Hibernate다
 }
 
 tasks.named('test') {
