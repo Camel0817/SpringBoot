@@ -22,7 +22,7 @@ dependencies {
 	
 	//JDBC 연결 디팬던시 추가
 	runtimeOnly 'org.mariadb.jdbc:mariadb-java-client'
-	implementation 'org.springframework.boot:spring-boot-starter-jdbc'
+	//implementation 'org.springframework.boot:spring-boot-starter-jdbc' => JPA에 포함
 	
 	//JPA 연결
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
@@ -49,6 +49,14 @@ dependencies {
 	//						-> hibernate : Entity를 관리(라이프 사이클 관리, 영속성 관리) 
 	//						CRUD 작업 수행할 수 있는 method 제공
 	
+	//	!!여기서 잠깐
+	//		Spring Data JPA를 build.gradle에 추가할 때
+	//		메이븐 레포지토리에서 찾아서 추가했는데..
+	//		알고보니, 거기에 이런 내용이 적혀있었다!
+	//		인터페이스면.. 구현체가 1개(hibernate)가 아니라 여러개 가능할 것
+	//			- Spring에서 JPA의 기본 구현체로 하이버네이트를 선정해뒀다.	
+	//		JDBC도 포함
+	//		= build.gradle에서 JDBC 제외 해도 되겠다.
 }
 
 tasks.named('test') {

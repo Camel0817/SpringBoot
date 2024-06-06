@@ -10,6 +10,8 @@ import javax.sql.DataSource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.datasource.DataSourceUtils;
 
+import jakarta.persistence.EntityManager;
+
 // 해아할 일
 // DB에 Product를 저장할 공간, 테이블... 준비
 // 1) DB랑 연결
@@ -23,6 +25,10 @@ public class ProductRepository {
 	
 	private Map<Integer, Product> dataBase = new HashMap<>();
 	private int id = 1;
+	
+	@Autowired
+	EntityManager entityManager;
+	
 //	@Autowired
 //	DataSource dataSource;
 //	
