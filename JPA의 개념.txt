@@ -3,3 +3,24 @@ DB는 객체를 저장히자못하지만
 객체지향적인 방법론은 객체를 저장해야함...
 
 그래서 JPA에 방법이 있음
+
+키워드 총정리
+	- JPA : 자바 객체 -> "ORM" -> RDBMS 저장
+	- hibernate : JPA 구현체(Spring 선택)
+
+	- Entity : 자바 객체 1:1 DB *Mapping
+	- EntityManager : Mapping 관리, CRUD method...
+	- EntityContext : Java - DB 사이 공간 Entity가 모여있는 곳!
+
+	- @Entity : Entity 선언
+	- @Id : PK 식별자
+
+EntityManager가 가진 CRUD 메소드
+	- 테이블 조회 SELECT
+		find(id) : 개별 조회
+		entityManager.createQuery("",Class).getResultList(); // 전체 조회
+
+	- 객체 등록 INSERT
+		persist(객체) // 저장
+	
+	- 수정 / 삭제
