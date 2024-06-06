@@ -33,19 +33,29 @@ public class ProductService {
 	 * 		: 생성자
 	 */
 	
-	private ProductRepository productRepository;
-	
-	@Autowired
-	ProductService(ProductRepository productRepository) {
-		this.productRepository = productRepository;
-	}
+//	private ProductRepository productRepository;
+//	
+//	@Autowired
+//	ProductService(ProductRepository productRepository) {
+//		this.productRepository = productRepository;
+//	}
 	
 //	public void makeConnection() {
 //		productRepository.makeConnection();
 //	}
 	
+	@Autowired
+	private SpringDataJPAProductRepository springDataJPAProductRepository;
+	
 	public Product getProduct(int id) {
-		return productRepository.getProduct(id);
+//		return productRepository.getProduct(id);
+		return springDataJPAProductRepository.findById(id).get();
+//		JPA -> DB에서 데이터를 가져오는 역할
+//		
+//		무조건 가져올 수 있느냐?
+//			= 무조건 내가 원하는 값을 달라하면, 무조건 나오나요?
+//				ex. 상품 리스트 id : 1~3 / 10을 달라 하면? null.getName();
+//		null인지 값이 들었는지.. 혹시 몰라서 한 겹 싸줄게 => Optional
 	}
 	
 	/*
@@ -69,10 +79,12 @@ public class ProductService {
 	@Transactional
 	public void saveProduct(Product product) {
 //		productRepository.save(productName);
-		productRepository.save(product);
+//		productRepository.save(product);
+		springDataJPAProductRepository.save(product);
 	}
 
 	public List<Product> getProducts() {
-		return productRepository.getProducts();
+//		return productRepository.getProducts();
+		return springDataJPAProductRepository.findAll();
 	}
 }
